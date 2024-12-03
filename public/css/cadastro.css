@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+.texto_titulo {
+    text-align: center;
+}
+
+.form_usuario {
+    width: 350px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid burlywood;
+}
+
+.input_enviar {
+    width: 100%;
+    padding: 10px;
+    border: 0px;
+    outline: none;
+    background-color: aquamarine;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.btn_enviar {
+    width: 100%;
+    border: 0px;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: aquamarine;
+}
+
+.btn_enviar:hover {
+    background-color: rgb(127, 255, 212, 70%);
+}
+
+.btn_home {
+    list-style: none;
+}
+
+.link_home{
+    width: 150px;
+}

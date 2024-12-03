@@ -1,0 +1,24 @@
+<!-- Componente Formulário de Cadastro de Usuários -->
+
+<div class="container texto_titulo mt-2">
+    <h1>Cadastro de Usuário</h1>
+</div>
+<div class="container mb-4 mt-4">
+    <form class="form_usuario" action="/api/cadastrar" method="post" enctype="multipart/form-data">
+        <div>
+            <label for="nome">Nome:</label>
+            <input class="input_enviar" type="text" id="nome" name="nome" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input class="input_enviar" type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="cpf">Cpf:</label>
+            <input class="input_enviar" type="text" id="cpf" name="cpf" required>
+        </div>
+        <div>
+            <button class="btn_enviar mt-2" type="submit">Enviar Cadastro</button>
+        </div>
+    </form>
+</div>
