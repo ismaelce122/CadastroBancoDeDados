@@ -1,16 +1,24 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LISTA DE USUÁRIOS</title>
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-    <%- include('../layouts/navBarHome') %>
-    <%- include('../layouts/listaUsuarios') %>
-    <script src="/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+<!-- Página Lista de Usuários -->
+
+<div class="container">
+    <div class="text-center mt-2">
+        <h1>Lista de Usuários</h1>
+    </div>
+</div>
+<div class="container-fluid row row-cols-12 row-cols-lg-3 ms-0 mt-4">
+    <% usuarios.forEach( function(usuario) { %>
+        <div class="p-2">
+            <div class="card px-2 text-center">
+                <div class="ms-0 text-start row mt-2">
+                    <span><strong>Nome:</strong> <%= usuario.nome %></span>
+                    <span><strong>Email:</strong> <%= usuario.email %></span> 
+                    <span><strong>Cpf:</strong> <%= usuario.cpf %></span>
+                </div>
+                <div class="row px-4">
+                    <a href="#" class="btn btn-warning mt-2 mb-2">Alterar</a>
+                    <a href="#" class="btn btn-danger mb-2">Excluir</a>
+                </div>
+            </div>
+        </div>
+    <% }) %>
+</div>

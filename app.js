@@ -36,12 +36,12 @@ database.connect((err) => {
 
 // Rota Principal
 app.get('/', (req, res) => {
-    res.render('pages/home')
+    res.render('layout', {body: 'pages/home'})
 })
 
 // Rota para Cadastrar Usuários
 app.get('/cadastro', (req, res) => {
-    res.render('pages/cadastro')
+    res.render('layout', {body: 'pages/cadastro'})
 })
 
 // Rota para exibir Usuários Cadastrados
@@ -49,7 +49,7 @@ app.get('/lista_de_usuarios', (req, res) => {
     const sql = 'SELECT * FROM usuarios'
     database.query(sql, (erro, retorno) => {
         if(erro) throw erro
-        res.render('pages/usuarios', {usuarios: retorno})
+        res.render('layout', {body: 'pages/usuarios', usuarios: retorno})
     })
 })
 
