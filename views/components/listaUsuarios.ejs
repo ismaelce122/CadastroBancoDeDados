@@ -1,0 +1,19 @@
+<!-- Componente Lista de Usuários -->
+
+<div class="container-fluid row row-cols-12 row-cols-lg-3 ms-0 mt-4">
+    <% usuarios.forEach( function(usuario) { %>
+        <div class="p-2">
+            <div class="card px-2 text-center">
+                <div class="ms-0 text-start row mt-2">
+                    <span><strong>Nome:</strong> <%= usuario.nome %></span>
+                    <span><strong>Email:</strong> <%= usuario.email %></span> 
+                    <span><strong>Cpf:</strong> <%= usuario.cpf %></span>
+                </div>
+                <div class="row px-4">
+                    <a href="#" class="btn btn-warning mt-2 mb-2">Alterar</a>
+                    <a href="#" class="btn btn-danger mb-2">Excluir</a>
+                </div>
+            </div>
+        </div>
+    <% }) %>
+</div>
